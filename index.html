@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Next Day Calculator</title>
+</head>
+
+<body>
+Enter a date and I will add one day:<br>
+<input id="date" type="input" placeholder="mm/dd/yyyy"> <input id="submit" type="submit"><br>
+<span id="label" style="font-weight: bold;"></span>
+
+<script type="text/javascript" src="calc-next-day.js"></script>
+<script type="text/javascript">
+	var submit = document.getElementById("submit");
+	var nextDay;
+
+	submit.addEventListener("click", function(){
+		var date = document.getElementById("date").value;
+
+		if(date){
+			nextDay = calcNextDay(date);
+			document.getElementById("label").innerHTML = nextDay;
+		}
+	});
+</script>
+</body>
+</html>
